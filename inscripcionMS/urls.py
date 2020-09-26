@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import InscriptionList, InscriptionDetail
+from webapp.views import InscriptionList, InscriptionDetail, InscriptionUserId
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inscriptions/', InscriptionList.as_view()),
     path('inscriptions/<int:pk>', InscriptionDetail.as_view()),
+    path('userInscription/', InscriptionUserId.as_view()),
 ]
